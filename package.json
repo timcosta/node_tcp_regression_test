@@ -1,0 +1,22 @@
+{
+  "name": "node_tcp_regression_test",
+  "version": "1.0.0",
+  "description": "Reproducible test case for Node TCP hangup error",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timcosta/node_tcp_regression_test.git"
+  },
+  "author": "Tim Costa <tim@timcosta.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timcosta/node_tcp_regression_test/issues"
+  },
+  "homepage": "https://github.com/timcosta/node_tcp_regression_test#readme",
+  "dependencies": {
+    "hapi": "^16.7.0"
+  }
+}
