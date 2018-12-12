@@ -11,8 +11,6 @@ const log = (message) => {
     console.log(`${(new Date()).toISOString()} - ${message}`);
 };
 
-let openedTime, closedTime;
-
 const address = '127.0.0.1';
 const port = 8000;
 
@@ -48,7 +46,7 @@ const runTestWithIntialDelay = async (delayInMS) => {
 
             socket.on('error', (e) => {
                 log('An error was received' + e);
-                process.exit(1);
+                reject(e);
             });
 
             socket.on('close', () => {
@@ -64,9 +62,14 @@ const runTestWithIntialDelay = async (delayInMS) => {
 };
 
 const execute = async () => {
-    await runTestWithIntialDelay(39 * 1000);
-    await runTestWithIntialDelay(41 * 1000);
-    process.exit(0);
+    try {
+        await runTestWithIntialDelay(39 * 1000);
+        await runTestWithIntialDelay(41 * 1000);
+        await delay(5000);
+        process.exit(0);
+    } catch (e) {
+        process.exit(1);
+    }
 }
 
 execute();

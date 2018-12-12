@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/timcosta/node_tcp_regression_test.git"
   },
-  "author": "Tim Costa <tim@timcosta.io>",
+  "contributors": [
+    "James Tymann <jtymann@2u.com>",
+    "Tim Costa <tim@timcosta.io>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/timcosta/node_tcp_regression_test/issues"
