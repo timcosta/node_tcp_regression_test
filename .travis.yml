@@ -6,7 +6,9 @@ node_js:
   - "10"
   - "11"
 
-sudo: false
+env:
+  - SERVER=hapi
+  - SERVER=http
 
 install:
   - "npm install"
