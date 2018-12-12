@@ -13,3 +13,4 @@ install:
 
 before_script:
   - "node index.js &"
+  - "sleep 5"
