@@ -48,6 +48,7 @@ const runTestWithIntialDelay = async (delayInMS) => {
 
             socket.on('error', (e) => {
                 log('An error was received' + e);
+                process.exit(1);
             });
 
             socket.on('close', () => {
