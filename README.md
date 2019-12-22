@@ -1,6 +1,9 @@
 # node_tcp_regression_test
 This repository is a minimum reproducible example of a regression in a node between v8.9.4 and v8.14.0, and present in v10.14.2 as well. Node v11.4.0 may have resolved the issue, however tests are inconsistent.
 
+## UPDATE
+As of Node 13.5.0, via https://github.com/nodejs/node/pull/30071, this issue has been resolved by increasing the default headers timeout from 40s to 60s.
+
 ## The Issue
 Our ELB on AWS has been reporting a large number of ELB_5XX errors for our servers. We tracked these to TCP hangups based on the 504 status code in the ELB Access logs and the `-` that denoted no back end server was connected to successfully.
 
