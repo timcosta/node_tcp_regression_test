@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/timcosta/node_tcp_regression_test#readme",
   "dependencies": {
-    "hapi": "^16.7.0"
+    "hapi": "^18.1.0"
   }
 }
